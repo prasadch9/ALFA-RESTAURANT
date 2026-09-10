@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #F7F5EF;
+}
+
+::selection {
+  background: #F5C518;
+  color: #0a0a0a;
+}
+
+/* Diagonal notch that echoes the star point in the ALFA mark */
+
+.notch-b {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    55% 100%,
+    46% 76%,
+    0 100%
+  );
+}
+
+/* Fixed: keep the top background behind the heading */
+.notch-t {
+  clip-path: polygon(
+    0 0,
+    46% 0,
+    55% 12%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* Diagonal notch - Mobile */
+@media (max-width: 768px) {
+  .notch-t {
+    clip-path: polygon(
+      0 0,
+      35% 0,
+      50% 8%,
+      65% 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+/* Thin gold underline rule, like the bar under ALFA in the logo */
+
+.gold-rule {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #F5C518,
+    #C99A0A 60%,
+    #F5C518
+  );
+  box-shadow: 0 2px 10px rgba(245, 197, 24, 0.5);
+}
+
+/* Card with layered depth -- raised, tactile, not a flat drop-shadow */
+
+.card-3d {
+  background: linear-gradient(
+    160deg,
+    #1c1c1c 0%,
+    #131313 100%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    0 18px 40px -18px rgba(0, 0, 0, 0.85);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  transform: perspective(900px) rotateX(0deg) translateY(0);
+}
+
+.card-3d:hover {
+  transform: perspective(900px) rotateX(3deg) translateY(-6px);
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(245, 197, 24, 0.25),
+    0 30px 55px -18px rgba(0, 0, 0, 0.9);
+}
+
+/* Beveled gold button, extruded look */
+
+.btn-gold {
+  background: linear-gradient(
+    180deg,
+    #FFE484 0%,
+    #F5C518 45%,
+    #D9AC0E 100%
+  );
+
+  color: #171717;
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 -3px 0 rgba(0, 0, 0, 0.18) inset,
+    0 12px 24px -10px rgba(245, 197, 24, 0.55);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 -3px 0 rgba(0, 0, 0, 0.18) inset,
+    0 16px 30px -8px rgba(245, 197, 24, 0.7);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  border: 2px solid #F5C518;
+  color: #F5C518;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: #F5C518;
+  color: #171717;
+}
+
+/* Text with subtle extruded edge, used sparingly for the hero mark */
+
+.text-extrude {
+  text-shadow:
+    0 1px 0 #C99A0A,
+    0 2px 0 #b98d09,
+    0 3px 0 #a67e08,
+    0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tracking-tightish {
+  letter-spacing: 0.01em;
+}

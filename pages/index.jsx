@@ -1,0 +1,112 @@
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import ImageSlider from "@/components/ImageSlider";
+import { heroSlides, vegItems, nonVegItems } from "@/data/menuData";
+import { GiChefToque, GiFarmTractor, GiFireBowl } from "react-icons/gi";
+import { FaAward } from "react-icons/fa";
+
+const points = [
+  {
+    icon: GiFireBowl,
+    title: "Fire-Grilled Signatures",
+    text: "Every kebab and tikka is finished over an open flame for real smoky depth.",
+  },
+  {
+    icon: GiFarmTractor,
+    title: "Fresh, Daily Ingredients",
+    text: "We source produce and meat fresh each morning -- nothing sits in the freezer.",
+  },
+  {
+    icon: GiChefToque,
+    title: "Recipes Passed Down",
+    text: "Family recipes refined over the years, balancing spice, richness and heat.",
+  },
+  {
+    icon: FaAward,
+    title: "A Table for Every Occasion",
+    text: "From quick lunches to family celebrations, we set the table for all of it.",
+  },
+];
+
+const spotlight = [vegItems[0], nonVegItems[0], vegItems[4], nonVegItems[4]];
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>ALFA Restaurant | Fire-Grilled Flavor, Served Fresh</title>
+        <meta
+          name="description"
+          content="ALFA Restaurant -- fire-grilled kebabs, slow-cooked curries and biryanis made fresh daily. Veg and non-veg menus, dine-in and reservations."
+        />
+      </Head>
+
+      <ImageSlider slides={heroSlides} />
+
+      {/* Points / highlights */}
+      <section className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <h2 className="font-display text-3xl md:text-5xl text-bone tracking-tightish">
+            Why guests keep coming back
+          </h2>
+          <div className="gold-rule w-16 mx-auto mt-4 rounded-full" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {points.map((p) => (
+            <div key={p.title} className="card-3d rounded-2xl p-6 text-center">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gold-sheen flex items-center justify-center shadow-popGold">
+                <p.icon size={26} className="text-ink" />
+              </div>
+              <h3 className="font-display text-lg text-bone tracking-tightish mb-2">{p.title}</h3>
+              <p className="text-bone/60 text-sm leading-relaxed">{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Spotlight dishes */}
+      <section className="bg-char py-16 md:py-24 notch-t notch-b">
+        <div className="max-w-7xl mx-auto px-5 md:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <div>
+              <h2 className="font-display text-3xl md:text-5xl text-bone tracking-tightish">
+                From the menu
+              </h2>
+              <p className="text-bone/60 mt-2">A quick taste of what's cooking, veg and non-veg alike.</p>
+            </div>
+            <Link href="/menu" className="btn-outline rounded-md px-5 py-2.5 font-display text-sm tracking-wide self-start">
+              View Full Menu
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {spotlight.map((item) => (
+              <div key={item.id} className="card-3d rounded-2xl overflow-hidden">
+                <div className="relative w-full h-40">
+                  <Image src={item.image} alt={item.name} fill sizes="25vw" className="object-cover" />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display text-base text-bone tracking-tightish">{item.name}</h3>
+                  <span className="text-gold text-sm font-semibold">{item.price}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24 text-center">
+        <h2 className="font-display text-3xl md:text-5xl text-bone tracking-tightish mb-4">
+          Hungry already?
+        </h2>
+        <p className="text-bone/60 max-w-xl mx-auto mb-8">
+          Book your table now and let us handle the rest -- fresh food, fast service, warm welcome.
+        </p>
+        <Link href="/contact" className="btn-gold inline-block px-8 py-3.5 rounded-md font-display text-base tracking-wide">
+          Reserve a Table
+        </Link>
+      </section>
+    </>
+  );
+}
