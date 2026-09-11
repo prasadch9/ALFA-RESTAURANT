@@ -95,7 +95,7 @@ export const nonVegItems = [
 export const heroSlides = [
   {
     id: "s1",
-    image: "https://picsum.photos/seed/alfa-hero-1/1600/900",
+    image: "/ef269b9c-d94f-4629-821d-38a1e81a932a.jpg",
     caption: "Fire-grilled. Flavor-first.",
   },
   {
