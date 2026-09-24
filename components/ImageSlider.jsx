@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function ImageSlider({ slides }) {
@@ -26,22 +25,21 @@ export default function ImageSlider({ slides }) {
   };
 
   return (
-    <div className="relative w-full h-[55vh] sm:h-[60vh] md:h-[82vh] overflow-hidden bg-char">
+    <div className="relative w-full overflow-hidden bg-char">
       {slides.map((slide, i) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            i === index ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+          className={`${
+            i === index
+              ? "relative opacity-100 z-10"
+              : "absolute inset-0 opacity-0 z-0 pointer-events-none"
+          } transition-opacity duration-700 ease-in-out`}
         >
-          <Image
-  src={slide.image}
-  alt={slide.caption}
-  fill
-  priority={i === 0}
-  sizes="100vw"
-  className="object-fill"
-/>
+          <img
+            src={slide.image}
+            alt={slide.caption}
+            className="w-full h-auto block"
+          />
         </div>
       ))}
 
@@ -50,6 +48,7 @@ export default function ImageSlider({ slides }) {
         <p className="font-display text-3xl md:text-6xl text-bone text-extrude tracking-tightish max-w-4xl animate-rise">
           {slides[index].caption}
         </p>
+
         <div className="gold-rule w-24 mt-5 rounded-full" />
       </div>
 
@@ -78,7 +77,9 @@ export default function ImageSlider({ slides }) {
             onClick={() => restart(() => setIndex(i))}
             aria-label={`Go to slide ${i + 1}`}
             className={`h-2 rounded-full transition-all ${
-              i === index ? "w-7 bg-gold" : "w-2 bg-bone/40 hover:bg-bone/70"
+              i === index
+                ? "w-7 bg-gold"
+                : "w-2 bg-bone/40 hover:bg-bone/70"
             }`}
           />
         ))}
@@ -86,4 +87,3 @@ export default function ImageSlider({ slides }) {
     </div>
   );
 }
-

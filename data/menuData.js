@@ -96,7 +96,6 @@ export const heroSlides = [
   {
     id: "s1",
     image: "/ef269b9c-d94f-4629-821d-38a1e81a932a.jpg",
-    caption: "Welcome To Our Restaurant.",
   },
   {
     id: "s2",
