@@ -26,7 +26,7 @@ export default function ImageSlider({ slides }) {
   };
 
   return (
-    <div className="relative w-full h-[62vh] md:h-[82vh] overflow-hidden bg-char">
+    <div className="relative w-full h-[55vh] sm:h-[60vh] md:h-[82vh] overflow-hidden bg-char">
       {slides.map((slide, i) => (
         <div
           key={slide.id}
@@ -35,14 +35,13 @@ export default function ImageSlider({ slides }) {
           }`}
         >
           <Image
-            src={slide.image}
-            alt={slide.caption}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-ink-fade" />
+  src={slide.image}
+  alt={slide.caption}
+  fill
+  priority={i === 0}
+  sizes="100vw"
+  className="object-fill"
+/>
         </div>
       ))}
 
@@ -62,6 +61,7 @@ export default function ImageSlider({ slides }) {
       >
         <FaChevronLeft size={18} />
       </button>
+
       <button
         onClick={() => restart(next)}
         aria-label="Next slide"
@@ -86,3 +86,4 @@ export default function ImageSlider({ slides }) {
     </div>
   );
 }
+

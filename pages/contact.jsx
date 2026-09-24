@@ -62,7 +62,7 @@ export default function Contact() {
                   </h3>
 
                   <p className="text-bone/60 text-sm mt-1">
-                    123 MG Road, Your City, India, 500001
+                  Beside Jakkampudi Blood bank, opp Samhitha Scanning Centre,, Rajahmundry (533101).
                   </p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Contact() {
                   </h3>
 
                   <p className="text-bone/60 text-sm mt-1">
-                    +91 98765 43210
+                    084880 80999
                   </p>
                 </div>
               </div>
@@ -134,7 +134,7 @@ export default function Contact() {
               <div className="flex items-center gap-6">
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/staralfarestaurant?stkn=dGJta21xZjh0ZzV2"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -145,7 +145,7 @@ export default function Contact() {
 
                 {/* Facebook */}
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/19U5C61Xwj/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"

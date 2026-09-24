@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Spotlight dishes */}
-      <section className="bg-char py-16 md:py-24 notch-t notch-b">
+      <section className="bg-char py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
             <div>
@@ -81,16 +81,30 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {spotlight.map((item) => (
-              <div key={item.id} className="card-3d rounded-2xl overflow-hidden">
-                <div className="relative w-full h-40">
-                  <Image src={item.image} alt={item.name} fill sizes="25vw" className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-display text-base text-bone tracking-tightish">{item.name}</h3>
-                  <span className="text-gold text-sm font-semibold">{item.price}</span>
-                </div>
-              </div>
-            ))}
+  <div
+    key={item.id}
+    className="card-3d rounded-2xl overflow-hidden flex flex-col h-full"
+  >
+    {/* Same Image Size for Every Card */}
+    <div className="relative w-full h-[240px] sm:h-[260px] lg:h-[280px] flex-shrink-0 overflow-hidden">
+      <Image
+        src={item.image}
+        alt={item.name}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        className="object-cover"
+      />
+    </div>
+
+    {/* Same Name + Price Alignment */}
+    <div className="p-4 h-[100px] flex flex-col justify-between">
+      <h3 className="font-display text-base text-bone tracking-tightish leading-tight">
+        {item.name}
+      </h3>
+
+    </div>
+  </div>
+))}
           </div>
         </div>
       </section>

@@ -36,16 +36,16 @@ export default function Footer() {
           <ul className="space-y-3 text-bone/70 text-sm">
             <li className="flex items-start gap-2">
               <FaMapMarkerAlt className="text-gold mt-1 shrink-0" />
-              <span>123 MG Road, Your City, India</span>
+              <span>Beside Jakkampudi Blood bank, opp Samhitha Scanning Centre,, Rajahmundry (533101).</span>
             </li>
             <li className="flex items-center gap-2">
               <FaPhoneAlt className="text-gold shrink-0" />
-              <span>+91 98765 43210</span>
+              <span>+91 084880 80999</span>
             </li>
           </ul>
           <div className="flex items-center gap-4 mt-5">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/staralfarestaurant?stkn=dGJta21xZjh0ZzV2"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -54,7 +54,7 @@ export default function Footer() {
               <FaInstagram size={18} />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/19U5C61Xwj/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

@@ -25,7 +25,7 @@ export default function Menu() {
           </h1>
           <div className="gold-rule w-16 mx-auto mt-4 rounded-full" />
           <p className="text-bone/60 mt-5">
-            Pick a category to see what's cooking. Prices and photos are
+            Pick a category to see what's cooking. Photos are
             placeholders you can swap in anytime.
           </p>
         </div>
