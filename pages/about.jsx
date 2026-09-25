@@ -37,25 +37,39 @@ export default function About() {
       </Head>
 
       {/* Hero band */}
-      <section className="relative py-20 md:py-28 bg-char overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <Image src="/logo.jpg" alt="" fill className="object-cover" />
-        </div>
+<section className="relative bg-char overflow-hidden">
+  <div className="relative w-full">
+    <Image
+      src="/about cover.jpg"
+      alt=""
+      width={1920}
+      height={1080}
+      sizes="100vw"
+      className="w-full h-auto block opacity-10"
+      priority
+    />
 
-        <div className="relative max-w-4xl mx-auto px-5 md:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-6xl text-bone tracking-tightish">
-            Our <span className="text-gold">Story</span>
-          </h1>
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-char/40" />
 
-          <div className="gold-rule w-16 mx-auto mt-5 rounded-full" />
-        </div>
-      </section>
+    {/* Title */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="relative max-w-4xl mx-auto px-5 md:px-8 text-center">
+        <h1 className="font-display text-4xl md:text-6xl text-bone tracking-tightish">
+          Our <span className="text-gold">Story</span>
+        </h1>
+
+        <div className="gold-rule w-16 mx-auto mt-5 rounded-full" />
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Story */}
-      <section className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden card-3d">
           <Image
-            src="https://picsum.photos/seed/alfa-about-kitchen/800/900"
+            src="/for about.png"
             alt="ALFA Restaurant kitchen"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -82,19 +96,13 @@ export default function About() {
             for.
           </p>
 
-          <p className="text-bone/70 leading-relaxed">
-            Replace this text and the photo alongside it with your own
-            restaurant's story, founding year, and photos whenever you're
-            ready.
-          </p>
         </div>
       </section>
 
       {/* Values */}
-      <section className="bg-char py-16 md:py-24 notch-t notch-b">
+      <section className="bg-char py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
 
-          {/* ONLY CHANGE: relative z-10 */}
           <div className="relative z-10 text-center max-w-2xl mx-auto mb-14">
             <h2 className="font-display text-3xl md:text-5xl text-bone tracking-tightish">
               What we stand for
@@ -127,12 +135,12 @@ export default function About() {
       </section>
 
       {/* Stats strip */}
-      <section className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+      <section className="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { n: "10+", l: "Years Serving" },
             { n: "40+", l: "Signature Dishes" },
-            { n: "5", l: "Days a Week" },
+            { n: "7", l: "Days a Week" },
             { n: "1000+", l: "Happy Guests" },
           ].map((s) => (
             <div key={s.l} className="card-3d rounded-2xl py-8 px-4">

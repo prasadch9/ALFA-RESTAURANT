@@ -44,13 +44,13 @@ export default function ImageSlider({ slides }) {
       ))}
 
       {/* Caption + brand overlay */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-16 md:pb-24 px-6 text-center">
-        <p className="font-display text-3xl md:text-6xl text-bone text-extrude tracking-tightish max-w-4xl animate-rise">
-          {slides[index].caption}
-        </p>
+<div className="hidden md:flex absolute inset-0 z-20 flex-col items-center justify-end pb-8 md:pb-24 px-6 text-center">
+  <p className="font-display text-3xl md:text-6xl text-bone text-extrude tracking-tightish max-w-4xl animate-rise">
+    {slides[index].caption}
+  </p>
 
-        <div className="gold-rule w-24 mt-5 rounded-full" />
-      </div>
+  <div className="gold-rule w-24 mt-5 rounded-full" />
+</div>
 
       {/* Arrows */}
       <button

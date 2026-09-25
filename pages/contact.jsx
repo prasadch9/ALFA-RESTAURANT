@@ -157,10 +157,89 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="lg:col-span-3">
-            {/* You can add your contact form here */}
-          </div>
+          {/* Right Column - Contact Us Form */}
+<div className="lg:col-span-3">
+  <div className="card-3d rounded-2xl p-6 md:p-8">
+    <h2 className="font-display text-2xl md:text-3xl text-bone tracking-tightish mb-2">
+      Contact <span className="text-gold">Us</span>
+    </h2>
+
+    <p className="text-bone/60 text-sm mb-6">
+      Send us a message and we'll get back to you soon.
+    </p>
+
+    {sent ? (
+      <div className="rounded-xl bg-gold-sheen p-6 text-center">
+        <h3 className="font-display text-xl text-ink mb-2">
+          Message Sent!
+        </h3>
+        <p className="text-ink/70 text-sm">
+          Thank you for contacting ALFA Restaurant. We'll get back to you soon.
+        </p>
+      </div>
+    ) : (
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <div>
+          <label className="block text-bone text-sm mb-2">
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+            className="w-full rounded-lg bg-ink border border-white/10 px-4 py-3 text-bone placeholder:text-bone/40 outline-none focus:border-gold transition-colors"
+          />
+        </div>
+
+        <div>
+          <label className="block text-bone text-sm mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            className="w-full rounded-lg bg-ink border border-white/10 px-4 py-3 text-bone placeholder:text-bone/40 outline-none focus:border-gold transition-colors"
+          />
+        </div>
+
+        <div>
+          <label className="block text-bone text-sm mb-2">
+            Phone
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter your phone number"
+            className="w-full rounded-lg bg-ink border border-white/10 px-4 py-3 text-bone placeholder:text-bone/40 outline-none focus:border-gold transition-colors"
+          />
+        </div>
+
+        <div>
+          <label className="block text-bone text-sm mb-2">
+            Message
+          </label>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+            required
+            className="w-full rounded-lg bg-ink border border-white/10 px-4 py-3 text-bone placeholder:text-bone/40 outline-none focus:border-gold transition-colors resize-none"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="btn-gold w-full py-3 rounded-lg font-display text-base tracking-wide"
+        >
+          Send Message
+        </button>
+      </form>
+    )}
+  </div>
+</div>
         </div>
 
         {/* Google Map */}
