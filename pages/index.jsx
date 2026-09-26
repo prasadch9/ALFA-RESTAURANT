@@ -49,7 +49,7 @@ export default function Home() {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-stretch">
 
     {/* Image */}
-<div className="relative w-full h-full min-h-0 flex justify-center">
+<div className="relative w-full h-72 sm:h-96 md:h-full min-h-0 flex justify-center">
   <Image
     src="/iran chai img.jpeg"
     alt="ALFA Restaurant Irani Dum Chai and Coffee"
