@@ -100,7 +100,7 @@ export default function Contact() {
                   </h3>
 
                   <p className="text-bone/60 text-sm mt-1">
-                    hello@alfarestaurant.com
+                    staralfarestaurant@gmail.com
                   </p>
                 </div>
               </div>
@@ -242,16 +242,17 @@ export default function Contact() {
 </div>
         </div>
 
+      
         {/* Google Map */}
-        <div className="mt-14 card-3d rounded-2xl overflow-hidden h-72 md:h-96">
-          <iframe
-            title="ALFA Restaurant location"
-            src="https://www.google.com/maps?q=India&output=embed"
-            className="w-full h-full border-0 grayscale contrast-125 opacity-90"
-            loading="lazy"
-            allowFullScreen
-          />
-        </div>
+<div className="mt-14 card-3d rounded-2xl overflow-hidden h-72 md:h-96">
+  <iframe
+    title="ALFA Restaurant location"
+    src="https://www.google.com/maps?q=Star+Alfa+Restaurant,+Rajahmundry&output=embed"
+    className="w-full h-full border-0"
+    loading="lazy"
+    allowFullScreen
+  />
+</div>
       </section>
     </>
   );

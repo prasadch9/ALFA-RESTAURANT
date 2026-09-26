@@ -37,39 +37,39 @@ export default function About() {
       </Head>
 
       {/* Hero band */}
-<section className="relative bg-char overflow-hidden">
-  <div className="relative w-full">
-    <Image
-      src="/about cover.jpg"
-      alt=""
-      width={1920}
-      height={1080}
-      sizes="100vw"
-      className="w-full h-auto block opacity-10"
-      priority
-    />
+      <section className="relative bg-char overflow-hidden">
+        <div className="relative w-full">
+          <Image
+            src="/about cover.jpg"
+            alt=""
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            className="w-full h-auto block opacity-10"
+            priority
+          />
 
-    {/* Dark overlay */}
-    <div className="absolute inset-0 bg-char/40" />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-char/40" />
 
-    {/* Title */}
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="relative max-w-4xl mx-auto px-5 md:px-8 text-center">
-        <h1 className="font-display text-4xl md:text-6xl text-bone tracking-tightish">
-          Our <span className="text-gold">Story</span>
-        </h1>
+          {/* Title */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative max-w-4xl mx-auto px-5 md:px-8 text-center">
+              <h1 className="font-display text-4xl md:text-6xl text-bone tracking-tightish">
+                Our <span className="text-gold">Story</span>
+              </h1>
 
-        <div className="gold-rule w-16 mx-auto mt-5 rounded-full" />
-      </div>
-    </div>
-  </div>
-</section>
+              <div className="gold-rule w-16 mx-auto mt-5 rounded-full" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Story */}
       <section className="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden card-3d">
           <Image
-            src="/for about.png"
+            src="/flam.jpg"
             alt="ALFA Restaurant kitchen"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -79,7 +79,7 @@ export default function About() {
 
         <div>
           <h2 className="font-display text-3xl md:text-4xl text-bone tracking-tightish mb-5">
-            Built around the flame
+            Built around <span className="text-gold">The Flame</span>
           </h2>
 
           <p className="text-bone/70 leading-relaxed mb-4">
@@ -95,7 +95,38 @@ export default function About() {
             different everyone's taste -- finds something worth coming back
             for.
           </p>
+        </div>
+      </section>
 
+      {/* Additional Food Section */}
+      <section className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="order-2 md:order-1">
+          <h2 className="font-display text-3xl md:text-4xl text-bone tracking-tightish mb-5">
+            Our Food, <span className="text-gold">Our Craft</span>
+          </h2>
+
+          <p className="text-bone/70 leading-relaxed mb-4">
+            Every dish at ALFA is prepared with attention to flavour, texture,
+            and presentation. From rich biryanis and sizzling starters to
+            comforting vegetarian favourites, our menu brings together the
+            flavours our guests love.
+          </p>
+
+          <p className="text-bone/70 leading-relaxed">
+            Fresh ingredients, carefully selected spices, and traditional
+            cooking techniques come together to create food that feels familiar
+            while still giving every meal its own special character.
+          </p>
+        </div>
+
+        <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden card-3d order-1 md:order-2">
+          <Image
+            src="/for about.png"
+            alt="ALFA Restaurant food"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
@@ -131,6 +162,37 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Additional Hospitality Section */}
+      <section className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden card-3d">
+          <Image
+            src="/peoples dinning.jpg"
+            alt="ALFA Restaurant dining experience"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div>
+          <h2 className="font-display text-3xl md:text-4xl text-bone tracking-tightish mb-5">
+            Made for <span className="text-gold">Every Table</span>
+          </h2>
+
+          <p className="text-bone/70 leading-relaxed mb-4">
+            A great restaurant is more than just the food. It is the
+            conversations, celebrations, family moments, and memories created
+            around the table.
+          </p>
+
+          <p className="text-bone/70 leading-relaxed">
+            At ALFA, we want every guest to feel comfortable, welcomed, and
+            cared for. Whether you are joining us for a quick meal or a special
+            celebration, our goal is to make every visit feel worth remembering.
+          </p>
         </div>
       </section>
 
